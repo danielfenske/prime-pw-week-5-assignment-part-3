@@ -73,14 +73,14 @@ showCollection(collection);
   // Work in Progress by Andy Mineo in 2019
   // Mmhmm by Reliant K in 2004
 
-// BONUS: Pull all artists from collection
+// EXTRA PRACTICE: Pull all artists from the 'collection' array
   // function was created to help me understand how to pull properties from objects within array
 
   function getArtists(input, field) {
     console.log('in getArtist');
     let output= [];
-    for (let i=0; i<collection.length; i++) { // loops through collection array
-      output.push(input[i][field]); // adds artists to end 'output' array
+    for (let i=0; i<input.length; i++) { // loops through collection array
+      output.push(input[i][field]); // adds artists to 'output' array
     } return output; // returns list artists as values within 'output' array
   } // end getArtist
 
@@ -92,3 +92,28 @@ showCollection(collection);
   // Create an array to hold any results, empty to start
   // Loop through the 'collection' and add any objects with a matching artist to the array
   // Return the array with the matching results. If no results are found, return an empty array
+
+function findByArtist(artist) {
+  console.log('in findByArtist');
+  let results = [];
+  for (let i=0; i<collection.length; i++) { // loops through 'collection' array
+    if (collection[i].artist === artist) { // conditional used to determine if 'artist' is within 'collection' array
+        results.push(collection[i]); // adds 'album' object of 'collection' array if 'album' meets condition
+    }
+  } return results; // returns 'results' array after looping through 'collection' array
+} // end findByArtist
+
+console.log(findByArtist('Andy Mineo'));
+// Statement output:
+  // (2) [{…}, {…}]
+  // 0: {title: 'Uncomfortable', artist: 'Andy Mineo', yearPublished: '2015'}
+  // 1: {title: 'Work in Progress', artist: 'Andy Mineo', yearPublished: '2019'}
+  // length: 2
+
+  console.log(findByArtist('Justin Bieber'));
+  // Statement output:
+    // [{…}]
+    // 0: {title: 'Justice', artist: 'Justin Bieber', yearPublished: '2021'}
+    // length: 1
+
+  console.log(findByArtist('Taylor Switft')); // Statement output: returns empty array ([])
