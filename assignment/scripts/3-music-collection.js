@@ -65,10 +65,30 @@ function showCollection (array) {
 showCollection(collection);
 // Statement output:
   // in showCollection
-  // 3-music-collection.js:57 6
-  // 3-music-collection.js:59 Justice by Justin Bieber in 2021
-  // 3-music-collection.js:59 Donda by Kanye West in 2021
-  // 3-music-collection.js:59 Seasons Change by Scotty McCreery in 2018
-  // 3-music-collection.js:59 Uncomfortable by Andy Mineo in 2015
-  // 3-music-collection.js:59 Work in Progress by Andy Mineo in 2019
-  // 3-music-collection.js:59 Mmhmm by Reliant K in 2004
+  // 6
+  // Justice by Justin Bieber in 2021
+  // Donda by Kanye West in 2021
+  // Seasons Change by Scotty McCreery in 2018
+  // Uncomfortable by Andy Mineo in 2015
+  // Work in Progress by Andy Mineo in 2019
+  // Mmhmm by Reliant K in 2004
+
+// BONUS: Pull all artists from collection
+  // function was created to help me understand how to pull properties from objects within array
+
+  function getArtists(input, field) {
+    console.log('in getArtist');
+    let output= [];
+    for (let i=0; i<collection.length; i++) { // loops through collection array
+      output.push(input[i][field]); // adds artists to end 'output' array
+    } return output; // returns list artists as values within 'output' array
+  } // end getArtist
+
+  console.log(getArtists(collection, 'artist'));
+
+
+// Add a function named 'findByArtist'. This function should:
+  // Take in 'artist' (a string) parameter
+  // Create an array to hold any results, empty to start
+  // Loop through the 'collection' and add any objects with a matching artist to the array
+  // Return the array with the matching results. If no results are found, return an empty array
