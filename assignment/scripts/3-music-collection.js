@@ -29,12 +29,12 @@ function addToCollection(title, artist, yearPublished) {
 
 // TEST: Logging each album as added using returned value
 
-console.log(addToCollection('Justice', 'Justin Bieber', '2021'));
-console.log(addToCollection('Donda', 'Kanye West', '2021'));
-console.log(addToCollection('Seasons Change', 'Scotty McCreery', '2018'));
-console.log(addToCollection('Uncomfortable', 'Andy Mineo', '2015'));
-console.log(addToCollection('Work in Progress', 'Andy Mineo', '2019'));
-console.log(addToCollection('Mmhmm', 'Reliant K', '2004'));
+console.log(addToCollection('Justice', 'Justin Bieber', 2021));
+console.log(addToCollection('Donda', 'Kanye West', 2021));
+console.log(addToCollection('Seasons Change', 'Scotty McCreery', 2018));
+console.log(addToCollection('Uncomfortable', 'Andy Mineo', 2015));
+console.log(addToCollection('Work in Progress', 'Andy Mineo', 2019));
+console.log(addToCollection('Mmhmm', 'Reliant K', 2004));
 
 // TEST: Log 'collection' array
 
@@ -164,3 +164,10 @@ console.log(search({})); // Statement output: 'collection' array
 console.log(search({artist: 'Andy Mineo', year: 2015})); // Statement output: {title: 'Uncomfortable', artist: 'Andy Mineo', yearPublished: '2015'}
 
 console.log(search({artist: 'Taylor Swift', year: 2017})); // Statement output: [] (empty array)
+
+
+
+// Add an array of tracks to your album objects. Each track should have a 'name' and 'duration'. You will need to update the functions to support this new property.
+  // Update the 'addToCollection' function to also take an input paramter for the array of tracks
+  // Update 'search' to allow a 'trackName' search criteria
+  // Update the 'showCollection' function to display the list of tracks for each album with its name and duration
